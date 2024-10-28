@@ -1,0 +1,95 @@
+
+.slick-dots {
+	position: relative;
+    bottom: auto;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-top: 33px;
+    display: flex;
+    gap: 4px;
+	
+	li {
+		border: 1px solid transparent;
+		padding: 4px;
+		border-radius: 50%;
+		margin: 0;
+		
+		button {
+			background: #D9D9D9;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			
+			&::before {
+				display: none;
+			}
+		}
+		&.slick-active {
+			border: 1px solid var(--color-grey);
+			
+			button {
+				background: var(--color-accent);
+			}
+		}
+	}
+}
+
+.standart {
+	.slick-dots {
+		li {
+			button {
+				background: #fff;
+			}
+			&.slick-active {
+				border: 1px solid #fff;
+			}
+		}
+	}
+}
+
+.slider-arrows {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	.slick-arrow {
+		display: block;
+		background: #AAAAAA;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		position: relative;
+		left: auto;
+		top: auto;
+		right: auto;
+		min-width: 56px;
+		height: 56px;
+		transform: none;
+	
+		&:before {
+			display: none;
+		}
+	
+		@include hover {
+			& {
+				background: var(--color-accent);
+			}
+		}
+	}
+	
+	.slick-prev {
+		order: 1;
+	}
+	
+	.slick-dots {
+		order: 2;
+		margin-top: 0;
+		width: auto;
+	}
+	
+	.slick-next {
+		order: 3;
+	}
+}

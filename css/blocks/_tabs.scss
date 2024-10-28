@@ -1,0 +1,94 @@
+.tabs {
+
+    &-dark {
+        .tabs__list {
+            &-item {
+                background: var(--color-grey);
+            }
+        }
+    }
+    &__list {
+        margin-bottom: 50px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            margin-bottom: 40px;
+            overflow: auto;
+            white-space: nowrap;
+        }
+    
+        &-item {
+            padding: 13px 20px;
+            border-radius: 30px;
+            background: #fff;
+            cursor: pointer;
+            color: var(--color-grey-dark);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 21px;
+            transition-duration: var(--transition-duration);
+
+            &.active {
+                background: var(--color-accent);
+                color: #fff;
+            }
+            @include hover {
+                & {
+                    background: var(--color-accent);
+                    color: #FFFFFF;
+                }
+            }
+        }
+        
+    }
+    &__elem {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        display: none;
+
+        .page__title {
+            color: var(--color-accent);
+        }
+
+        &.active {
+            display: flex;
+        }
+        
+        &-item {
+            width: calc(1/6*100% - (1 - 1/6)*40px); 
+
+            @include tablet {
+                width: 134px;
+                padding: 0 5px;
+            }
+
+            .partners__logo-item {
+                background: #FFFFFF;
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #E2E2E2;
+            }
+        
+            img {
+                max-width: 100%;
+                height: auto;
+
+                @include tablet {
+                    max-width: 75%;
+                }
+            }
+        }
+    }
+}

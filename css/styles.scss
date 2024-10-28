@@ -1,0 +1,28 @@
+@import
+    'normalize',
+    'fonts',
+    'mixins',
+    'media',
+    'variables',
+    'utils',
+    'globals';
+
+@import
+    'blocks/header',
+    'blocks/burger',
+    'blocks/mobile-menu',
+    'blocks/search',
+    'blocks/slider',
+    'blocks/section',
+    'blocks/advantages',
+    'blocks/content',
+    'blocks/experience',
+    'blocks/tabs',
+    'blocks/category',
+    'blocks/products',
+    'blocks/manufacture',
+    'blocks/myslick',
+    'blocks/map';
+
+@import
+    'pages/about';

@@ -1,0 +1,125 @@
+.geo {
+    overflow: hidden;
+
+    &__wrapper {
+        width: 1410px;
+        position: relative;
+    }
+
+    &__inner {
+        position: relative;
+        margin-top: 93px;
+        overflow-x: scroll;
+        margin: 0 -15px;
+
+        .map-point {
+            position: absolute;
+            cursor: pointer;
+
+            &__01 {
+                left: 69px;
+                top: 128px;
+            }
+
+            &__02 {
+                left: 339px;
+                top: 110px;
+            }
+
+            &__03 {
+                left: 212px;
+                top: 196px;
+            }
+
+            &__04 {
+                left: 386px;
+                top: 217px;
+            }
+
+            &__05 {
+                right: 236px;
+                top: 132px;
+            }
+
+            &__06 {
+                right: 122px;
+                top: 304px;
+            }
+
+            &__07 {
+                right: 242px;
+                top: 249px;
+            }
+
+            &__08 {
+                right: 414px;
+                top: 139px;
+            }
+            
+            &__09 {
+                right: 464px;
+                top: 136px;
+            }
+            
+            &__10 {
+                right: 484px;
+                top: 92px;
+            }
+            
+            &__11 {
+                right: 521px;
+                top: 70px;
+            }
+
+            &__12 {
+                right: 541px;
+                top: 132px;
+            }
+            
+            &__13 {
+                right: 645px;
+                top: 271px;
+            }
+
+            &__content {
+                position: absolute;
+                bottom: 50px;
+                width: 330px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 34px 0px #0000001A;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+                z-index: 9;
+                display: none;
+
+                &-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24.38px;
+                    color: var(--color-accent);
+                }
+
+                &-text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                }
+
+                &-year {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24.38px;
+                }
+            }
+
+            &:hover .map-point__content {
+                @include tablet-above {
+                    display: block;
+                }
+            }
+        }
+    }
+}

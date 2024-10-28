@@ -1,0 +1,37 @@
+.slider {
+    padding: 0 !important;
+    overflow: hidden;
+
+    &__item {
+        padding: 202px 0;
+	    height: 850px;
+
+        @include mobile {
+            height: 520px;
+            padding: 148px 0;
+        }
+
+        &-button {
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        &-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 58.51px;
+            color: #FFFFFF;
+            margin-bottom: 70px;
+            max-width: 780px;
+            text-transform: uppercase;
+
+            @include mobile {
+                font-size: 19px;
+                line-height: 23.16px;
+                text-align: center;
+                margin-bottom: 29px;
+            }
+        }
+    }
+}

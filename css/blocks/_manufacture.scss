@@ -1,0 +1,127 @@
+.manufacture {
+	padding-top: 120px;
+	overflow: hidden;
+
+	@include tablet {
+		padding-top: 60px;
+	}
+
+	&__inner {
+		position: relative;
+
+		.page__title {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__slider {
+		margin: 0 -15px;
+	}
+
+	&__item {
+		padding: 0 15px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 120px;
+
+		@include tablet {
+			gap: 30px;
+			flex-direction: column;
+		}
+
+		img {
+			@include tablet {
+				order: 1;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+
+		@include tablet {
+			font-size: 14px;
+			line-height: 21px;
+		}
+
+		@include tablet {
+			order: 2;
+		}
+
+		&-title {
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 39.01px;
+
+			@include tablet {
+				font-size: 18px;
+				line-height: 21.94px;
+			}
+		}
+	}
+
+	.manufacture-gallery {
+		
+		@include tablet {
+			margin-right: -30px;
+			margin-left: -10px;
+		}
+
+		&__list {
+
+			&-item {
+				width: 240px;
+				aspect-ratio: 1 / 1;
+				overflow: hidden;
+				padding: 0 10px;
+
+				img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	&-about {
+		.slider-manufacture-arrows {
+			position: absolute;
+			bottom: 0;
+			left: 15px;
+
+			@include tablet {
+				position: relative;
+				bottom: auto;
+				left: auto;
+			}
+		}
+
+		.container {
+			position: relative;
+		}
+	
+		.section__title {
+			position: absolute;
+			top: 0;
+			left: 15px;
+
+			@include tablet {
+				position: relative;
+				top: auto;
+				left: auto;
+			}
+		}
+	}
+}

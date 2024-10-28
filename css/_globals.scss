@@ -1,0 +1,225 @@
+body {
+    @include fluid-text(16, 14);
+
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.28;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    &.fixed {
+        overflow: hidden;
+    }
+
+    .overlay {
+        background: var(--color-dark);;
+        opacity: .7;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        display: none;
+    }
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.pb0 {
+    padding-bottom: 0!important;
+}
+
+.mb0 {
+    margin-bottom: 0!important;
+}
+
+.section-title {
+    @include fluid-text(36, 24);
+    margin-bottom: 30px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.red-text {
+    color: var(--color-accent);
+}
+
+.small-text {
+    text-transform: none;
+}
+
+.btn {
+	border: 1px solid var(--color-accent);
+	background: var(--color-accent);
+	color: #FFFFFF;
+	text-align: center;
+    padding: 0 40px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 17.07px;
+    }
+}
+
+.section__title {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+
+.section__more {
+    padding-right: 70px;
+
+    a {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: var(--color-accent);
+        display: inline-block;
+        padding-bottom: 10px;
+        position: relative;
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 21px;
+            padding-bottom: 0;
+        }
+
+        &:after {
+            width: 100%;
+            height: 1px;
+            content: '';
+            background: var(--color-accent);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:before {
+            content: url('data:image/svg+xml,<svg width="41" height="13" viewBox="0 0 41 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.5657 7.06569C40.8781 6.75327 40.8781 6.24673 40.5657 5.93431L35.4745 0.843146C35.1621 0.530726 34.6556 0.530726 34.3431 0.843146C34.0307 1.15557 34.0307 1.6621 34.3431 1.97452L38.8686 6.5L34.3431 11.0255C34.0307 11.3379 34.0307 11.8444 34.3431 12.1569C34.6556 12.4693 35.1621 12.4693 35.4745 12.1569L40.5657 7.06569ZM0 7.3H40V5.7H0V7.3Z" fill="%23C54126"/></svg>');
+            position: absolute;
+            top: 0;
+            right: -60px;
+            transition-duration: var(--transition-duration);
+        }
+
+        @include hover {
+            &:before {
+                right: -70px;
+            }
+        }
+    }
+}
+
+.page__title {
+	font-size: clamp(24px, 2.5531914894vw, 36px);
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 43.88px;
+	text-transform: uppercase;
+
+    @include tablet {
+        font-size: 24px;
+        line-height: 29.26px;
+    }
+}
+
+.banner {
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    padding-top: 97px;
+    color: #FFFFFF;
+
+    &.banner-big {
+        height: 615px;
+    }
+
+    @include tablet {
+        height: 460px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+	&__inner {
+		display: flex;
+		row-gap: 30px;
+		flex-direction: column;
+        align-items: flex-start;
+
+        @include tablet {
+            row-gap: 20px;
+            align-items: center;
+        }
+
+		&-title {
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 58.51px;
+            text-transform: uppercase;
+
+            @include tablet {
+                font-size: 19px;
+                line-height: 23.16px;
+                text-align: center;
+            }
+		}
+
+        &-text {
+            font-size: 22px;
+            line-height: 33px;          
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+            }
+		}
+	}
+}
